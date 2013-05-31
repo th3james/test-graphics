@@ -1,0 +1,25 @@
+/indicator/recycling_rates/metadata
+{
+  "fields": [
+    "year",
+    "green recyling",
+    "dry recyling"
+    "target"
+  ]
+  "axes": {
+    "x": {
+      "field": "year"
+      "resolution": ""
+    }
+  }
+}
+
+As a developer of the visualisation
+I need to have know which fields are axes
+In order to generate a graph without requiring the user to specify it
+
+    This might also need a graph type to be useful?
+
+As a developer
+I need the list of fields data types
+In order to...

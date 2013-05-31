@@ -1,0 +1,5 @@
+[
+  "controllers/main_controller",
+  "templates/main_graphics",
+  "views/main_graphics_view"
+]

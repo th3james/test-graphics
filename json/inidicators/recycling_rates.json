@@ -1,0 +1,14 @@
+[
+  {
+    "year": 2010,
+    "green recycling": 51,
+    "dry recycling": 42,
+    "target": 0
+  },
+  {
+    "year": 2011,
+    "greenrecycling": 55,
+    "dryrecycling": 47,
+    "target": 10
+  }
+]
