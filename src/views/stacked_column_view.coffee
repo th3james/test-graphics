@@ -1,18 +1,7 @@
 window.Backbone ||= {}
 window.Backbone.Views ||= {}
 
-class Backbone.Views.StackedColumnView extends Backbone.View
-  template: Handlebars.templates['stacked_column.hbs']
-
-  initialize: (options) ->
-    @indicator = new Backbone.Models.Indicator(name: options.indicatorName)
-    
-    @indicator.fetchAllData(@render)
-
-  render: =>
-    @$el.html(@template(name: @indicator.get('name')))
-    @drawGraph()
-    return @
+class Backbone.Views.StackedColumnView extends Backbone.Views.IndicatorGraphicView
 
   getCategoriesFromIndicator: ->
     xAxisField = @indicator.getXAxisField()

@@ -1,7 +1,9 @@
 [
   "models/indicator",
-  "templates/stacked_column",
+  "templates/indicator_graphic",
+  "views/indicator_graphic_view",
   "views/stacked_column_view",
+  "views/pie_chart_view",
   "controllers/main_controller",
   "templates/main_graphics",
   "views/main_graphics_view"

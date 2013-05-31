@@ -9,10 +9,8 @@ class window.Backbone.Models.Indicator extends Backbone.Model
   fetchAllData: (successCallback) ->
     @getMetadata((metadata)=>
       @set('metadata', metadata)
-      debugger
       @getData((data)=>
         @set('data', data)
-        debugger
         successCallback()
       )
     )
@@ -21,7 +19,7 @@ class window.Backbone.Models.Indicator extends Backbone.Model
     $.ajax(
       url: "json/indicators/#{@get('name')}/metadata.json"
     ).done(successCallback).fail((a,b,c) ->
-      debugger
+      console.log "Error getting metdata!"
     )
 
   getData: (successCallback) ->
@@ -31,4 +29,7 @@ class window.Backbone.Models.Indicator extends Backbone.Model
 
   getXAxisField: ->
     @get('metadata').axes.x.field
+
+  getYAxisField: ->
+    @get('metadata').axes.y.field
 
