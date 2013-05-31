@@ -18,6 +18,5 @@ class Backbone.Views.MainGraphicsView extends Backbone.Diorama.NestingView
 
     return @
 
-
   onClose: ->
     @closeSubViews()

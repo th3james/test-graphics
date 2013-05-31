@@ -1,8 +1,8 @@
 window.Backbone ||= {}
 window.Backbone.Views ||= {}
 
-class Backbone.Views.IndicatorGraphicView extends Backbone.View
-  template: Handlebars.templates['indicator_graphic.hbs']
+class Backbone.Views.StackedColumnView extends Backbone.View
+  template: Handlebars.templates['stacked_column.hbs']
 
   initialize: (options) ->
     @indicator = new Backbone.Models.Indicator(name: options.indicatorName)
@@ -10,9 +10,32 @@ class Backbone.Views.IndicatorGraphicView extends Backbone.View
     @indicator.fetchAllData(@render)
 
   render: =>
-    @$el.html(@template())
+    @$el.html(@template(name: @indicator.get('name')))
     @drawGraph()
     return @
+
+  getCategoriesFromIndicator: ->
+    xAxisField = @indicator.getXAxisField()
+
+    categories = []
+    for entry in @indicator.get('data')
+      categories.push(entry[xAxisField])
+    return categories
+
+  getSeriesFromIndicator: ->
+    xAxisField = @indicator.getXAxisField()
+
+    series = []
+
+    if @indicator.get('data').length > 0
+      for fieldName, value of @indicator.get('data')[0]
+        if fieldName != xAxisField
+          group = {name: fieldName, data: []}
+          for entry in @indicator.get('data')
+            group.data.push entry[fieldName]
+          series.push group
+
+    return series
 
   drawGraph: ->
     return unless @indicator.get('metadata')?
@@ -25,7 +48,7 @@ class Backbone.Views.IndicatorGraphicView extends Backbone.View
         text: "Stacked column chart"
 
       xAxis:
-        categories: @indicator.getCategories()
+        categories: @getCategoriesFromIndicator()
 
       yAxis:
         min: 0
@@ -60,7 +83,7 @@ class Backbone.Views.IndicatorGraphicView extends Backbone.View
             enabled: true
             color: (Highcharts.theme and Highcharts.theme.dataLabelsColor) or "white"
 
-      series: @indicator.getSeries()
+      series: @getSeriesFromIndicator()
     )
 
   onClose: ->

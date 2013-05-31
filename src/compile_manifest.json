@@ -1,7 +1,7 @@
 [
   "models/indicator",
-  "templates/indicator_graphic",
-  "views/indicator_graphic_view",
+  "templates/stacked_column",
+  "views/stacked_column_view",
   "controllers/main_controller",
   "templates/main_graphics",
   "views/main_graphics_view"
