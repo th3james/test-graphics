@@ -1,0 +1,12 @@
+{
+  "axes": {
+    "x": {
+      "field": "name",
+      "type": "text"
+    },
+    "y": {
+      "field": "percentage",
+      "type": "percentage"
+    }
+  }
+}

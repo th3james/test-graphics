@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Construction, demolition and excavation",
+    "percentage": 36
+  },
+  {
+    "name": "Municipal",
+    "percentage": 10
+  },
+  {
+    "name": "Mining and quarrying",
+    "percentage": 22
+  },
+  {
+    "name": "Commercial and industrial",
+    "percentage": 27
+  },
+  {
+    "name": "Other",
+    "percentage": 2
+  }
+]

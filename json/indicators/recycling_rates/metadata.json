@@ -1,7 +1,8 @@
 {
   "axes": {
     "x": {
-      "field": "year"
+      "field": "year",
+      "type": "time"
     }
   }
 }
