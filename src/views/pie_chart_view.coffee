@@ -46,7 +46,3 @@ class Backbone.Views.PieChartView extends Backbone.Views.IndicatorGraphicView
         name: @indicator.get('name')
         data: @getSeriesFromIndicator()
       ]
-
-
-  onClose: ->
-    

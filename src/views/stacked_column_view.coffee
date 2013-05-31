@@ -74,6 +74,3 @@ class Backbone.Views.StackedColumnView extends Backbone.Views.IndicatorGraphicVi
 
       series: @getSeriesFromIndicator()
     )
-
-  onClose: ->
-    
