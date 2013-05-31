@@ -1,49 +1,23 @@
 window.Backbone ||= {}
-window.Backbone.Controllers ||= {}
-
-class Backbone.Controllers.MainController extends Backbone.Diorama.Controller
-  constructor: ->
-    @mainRegion = new Backbone.Diorama.ManagedRegion()
-    $('body').append(@mainRegion.$el)
-    
-    # Default state
-    @graphics()
-
-
-  graphics: =>
-    graphicsView = new Backbone.Views.MainGraphicsView()
-    @mainRegion.showView(graphicsView)
-
-    ###
-      @changeStateOn maps events published by other objects to
-      controller states
-    ###
-    @changeStateOn(
-    #  {event: 'someEvent', publisher: graphicsView, newState: @anotherState}
-    )
-
-
-
-window.Backbone ||= {}
 window.Backbone.Views ||= {}
 
-class Backbone.Views.MainGraphicsView extends Backbone.View
-  template: Handlebars.templates['main_graphics.hbs']
+class Backbone.Views.IndicatorGraphicView extends Backbone.View
+  template: Handlebars.templates['indicator_graphic.hbs']
 
   initialize: (options) ->
-    @render()
+    @indicator = new Backbone.Models.Indicator(name: options.indicatorName)
+    
+    @indicator.fetchAllData(@render)
 
-  render: ->
+  render: =>
     @$el.html(@template())
     @drawGraph()
     return @
 
-  getGraphData: (successCallback) ->
-
   drawGraph: ->
-    categories = series = []
-    @$el("#container").highcharts(
-    .$el.find("#container").highcharts(
+    return unless @indicator.get('metadata')?
+
+    @$el.find("#container").highcharts(
       chart:
         type: "column"
 
@@ -51,7 +25,7 @@ class Backbone.Views.MainGraphicsView extends Backbone.View
         text: "Stacked column chart"
 
       xAxis:
-        categories: categories
+        categories: @indicator.getCategories()
 
       yAxis:
         min: 0
@@ -86,7 +60,7 @@ class Backbone.Views.MainGraphicsView extends Backbone.View
             enabled: true
             color: (Highcharts.theme and Highcharts.theme.dataLabelsColor) or "white"
 
-      series: series
+      series: @indicator.getSeries()
     )
 
   onClose: ->
