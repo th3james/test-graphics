@@ -25,11 +25,28 @@ class window.Backbone.Models.Indicator extends Backbone.Model
       url: "json/indicators/#{@get('name')}.json"
     ).done(successCallback)
 
+  getXAxisField: ->
+    @get('metadata').axes.x.field
+
   getCategories: ->
-    xAxisField = @get('metadata').axes.x.field
+    xAxisField = @getXAxisField()
+
     categories = []
     for entry in @get('data')
       categories.push(entry[xAxisField])
     return categories
 
   getSeries: ->
+    xAxisField = @getXAxisField()
+
+    series = []
+
+    if @get('data').length > 0
+      for fieldName, value of @get('data')[0]
+        if fieldName != xAxisField
+          group = {name: fieldName, data: []}
+          for entry in @get('data')
+            group.data.push entry[fieldName]
+          series.push group
+    
+    return series
