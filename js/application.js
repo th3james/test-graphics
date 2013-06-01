@@ -156,7 +156,6 @@
         entry = _ref4[_i];
         categories.push(entry[xAxisField]);
       }
-      console.log(categories);
       return categories;
     };
 
@@ -179,7 +178,6 @@
         }
         series.push(group);
       }
-      console.log(series);
       return series;
     };
 
@@ -378,7 +376,6 @@
         entry = _ref7[_i];
         categories.push(entry.attributes[xAxisField]);
       }
-      console.log(categories);
       return categories;
     };
 
@@ -401,7 +398,6 @@
         }
         series.push(group);
       }
-      console.log(series);
       return series;
     };
 

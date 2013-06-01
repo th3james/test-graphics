@@ -10,7 +10,6 @@ class Backbone.Views.EsriStackedColumnView extends Backbone.Views.EsriMapIndicat
     for entry in @indicator.get('data').results
       categories.push(entry.attributes[xAxisField])
 
-    console.log categories
     return categories
 
   getSeriesFromIndicator: ->
@@ -24,7 +23,6 @@ class Backbone.Views.EsriStackedColumnView extends Backbone.Views.EsriMapIndicat
         group.data.push parseFloat(entry.attributes[fieldName], 10)
       series.push group
 
-    console.log series
     return series
 
   drawGraph: ->
