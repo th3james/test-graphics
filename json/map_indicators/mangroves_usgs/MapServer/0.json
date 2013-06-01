@@ -1,0 +1,31 @@
+{
+  "id" : 0, 
+  "name" : "Mangrove forests distributions of the world  - 2000", 
+  "type" : "Feature Layer", 
+  "geometryType" : "esriGeometryPolygon", 
+  "description" : "", 
+  "definitionExpression" : "", 
+  "copyrightText" : "", 
+  "minScale" : 0, 
+  "maxScale" : 0, 
+  "extent" : {
+    "xmin" : -20031488.9167307, 
+    "ymin" : -4687647.72183696, 
+    "xmax" : 20035507.0494218, 
+    "ymax" : 3608449.51190562, 
+    "spatialReference" : {
+      "wkid" : 102113
+    }
+  }, 
+  "displayField" : "gis_dd.mar.mangrove_distrib_USGS_2000_py.area", 
+  "fields" : [
+    {"name" : "objectid", "type" : "esriFieldTypeOID", "alias" : "OBJECTID"}, 
+    {"name" : "gis_dd.mar.mangrove_distrib_USGS_2000_py.area", "type" : "esriFieldTypeDouble", "alias" : "area"}, 
+    {"name" : "perimeter", "type" : "esriFieldTypeDouble", "alias" : "perimeter"}, 
+    {"name" : "shape", "type" : "esriFieldTypeGeometry", "alias" : "Shape"}, 
+    {"name" : "st_area(shape)", "type" : "esriFieldTypeDouble", "alias" : "st_area(shape)"}, 
+    {"name" : "st_length(shape)", "type" : "esriFieldTypeDouble", "alias" : "st_length(shape)"}
+  ], 
+  "parentLayer" : null, 
+  "subLayers" : []
+}

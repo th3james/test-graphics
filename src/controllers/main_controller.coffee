@@ -19,6 +19,17 @@ class Backbone.Controllers.MainController extends Backbone.Diorama.Controller
       controller states
     ###
     @changeStateOn(
-    #  {event: 'someEvent', publisher: graphicsView, newState: @anotherState}
+      {event: 'switchToMaps', publisher: graphicsView, newState: @maps}
     )
 
+  maps: =>
+    mapsView = new Backbone.Views.MapsView()
+    @mainRegion.showView(mapsView)
+
+    ###
+      @changeStateOn maps events published by other objects to
+      controller states
+    ###
+    @changeStateOn(
+      {event: 'switchToGraphics', publisher: mapsView, newState: @graphics}
+    )

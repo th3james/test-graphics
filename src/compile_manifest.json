@@ -1,9 +1,14 @@
 [
   "models/indicator",
+  "models/map_indicator",
   "templates/indicator_graphic",
   "views/indicator_graphic_view",
   "views/stacked_column_view",
   "views/pie_chart_view",
+  "templates/maps",
+  "views/maps_view",
+  "templates/map",
+  "views/map_view",
   "controllers/main_controller",
   "templates/main_graphics",
   "views/main_graphics_view"
