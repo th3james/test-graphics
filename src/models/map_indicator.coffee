@@ -5,6 +5,9 @@ class window.Backbone.Models.MapIndicator extends Backbone.Models.Indicator
     @serviceName = options.serviceName
     @layer = options.layer
 
+  getFullTitle: ->
+    @get('metadata').name
+
   getMetadata: (successCallback) ->
     $.ajax(
       url: "json/map_indicators/#{@get('serviceName')}/MapServer/#{@get('layer')}.json"

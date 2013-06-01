@@ -4,6 +4,9 @@ window.Backbone.Views ||= {}
 class Backbone.Views.MapsView extends Backbone.Diorama.NestingView
   template: Handlebars.templates['maps.hbs']
 
+  events:
+    "click #switch-to-environment": "triggerSwitchToEnvironment"
+
   initialize: (options) ->
     @mapIndicator = new Backbone.Models.MapIndicator(
       serviceName: "ESRI_StateCityHighway_USA",
@@ -16,6 +19,9 @@ class Backbone.Views.MapsView extends Backbone.Diorama.NestingView
     @renderSubViews()
 
     return @
+
+  triggerSwitchToEnvironment: =>
+    @trigger('switchToEnvironment')
 
   onClose: ->
     @closeSubViews()

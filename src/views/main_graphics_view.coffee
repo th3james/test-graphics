@@ -5,7 +5,7 @@ class Backbone.Views.MainGraphicsView extends Backbone.Diorama.NestingView
   template: Handlebars.templates['main_graphics.hbs']
 
   events:
-    "click #switch-to-maps": "triggerSwitchToMaps"
+    "click #switch-to-esri": "triggerSwitchToEsri"
 
   initialize: (options) ->
     @render()
@@ -21,7 +21,8 @@ class Backbone.Views.MainGraphicsView extends Backbone.Diorama.NestingView
 
     return @
 
-  triggerSwitchToMaps: ->
-    @trigger('switchToMaps')
+  triggerSwitchToEsri: ->
+    @trigger('switchToEsri')
+
   onClose: ->
     @closeSubViews()
