@@ -16,13 +16,11 @@ class Backbone.Views.StackedColumnView extends Backbone.Views.IndicatorGraphicVi
 
     series = []
 
-    if @indicator.get('data').length > 0
-      for fieldName, value of @indicator.get('data')[0]
-        if fieldName != xAxisField
-          group = {name: fieldName, data: []}
-          for entry in @indicator.get('data')
-            group.data.push entry[fieldName]
-          series.push group
+    for fieldName in @indicator.get('metadata').axes.y.fields
+      group = {name: fieldName, data: []}
+      for entry in @indicator.get('data')
+        group.data.push entry[fieldName]
+      series.push group
 
     return series
 
@@ -34,15 +32,17 @@ class Backbone.Views.StackedColumnView extends Backbone.Views.IndicatorGraphicVi
         type: "column"
 
       title:
-        text: "Stacked column chart"
+        text: @indicator.getFullTitle()
 
       xAxis:
         categories: @getCategoriesFromIndicator()
+        title:
+          text: @indicator.get('metadata').axes.x.name
 
       yAxis:
         min: 0
         title:
-          text: "Total fruit consumption"
+          text: @indicator.get('metadata').axes.y.name
 
         stackLabels:
           enabled: true

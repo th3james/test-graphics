@@ -1,12 +1,16 @@
 {
+  "full name": "Waste arising, by sector",
   "axes": {
     "x": {
-      "field": "name",
+      "fields": ["name"],
+      "unit": "name",
       "type": "text"
     },
     "y": {
-      "field": "percentage",
-      "type": "percentage"
+      "fields": ["percentage"],
+      "name": "Recycling rate %",
+      "unit": "%"
     }
-  }
+  },
+  "data published": "2006"
 }

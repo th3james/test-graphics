@@ -17,6 +17,7 @@ class Backbone.Views.PieChartView extends Backbone.Views.IndicatorGraphicView
   drawGraph: ->
     return unless @indicator.get('metadata')?
 
+    xAxisField = @indicator.getXAxisField()
     @$el.find("#container").highcharts
       chart:
         plotBackgroundColor: null
@@ -24,7 +25,7 @@ class Backbone.Views.PieChartView extends Backbone.Views.IndicatorGraphicView
         plotShadow: false
 
       title:
-        text: @indicator.get('name')
+        text: @indicator.getFullTitle()
 
       tooltip:
         pointFormat: "{series.name}: <b>{point.percentage}%</b>"
@@ -39,10 +40,11 @@ class Backbone.Views.PieChartView extends Backbone.Views.IndicatorGraphicView
             color: "#000000"
             connectorColor: "#000000"
             formatter: ->
-              "<b>" + @point.name + "</b>: " + @percentage + " %"
+              name = if @point.name == 'Slice' then @point.x else @point.name
+              "<b>" + name + "</b>: " + @percentage + " %"
 
       series: [
         type: "pie"
-        name: @indicator.get('name')
+        name: @indicator.get('metadata')['full name']
         data: @getSeriesFromIndicator()
       ]

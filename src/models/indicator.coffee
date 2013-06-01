@@ -27,9 +27,12 @@ class window.Backbone.Models.Indicator extends Backbone.Model
       url: "json/indicators/#{@get('name')}.json"
     ).done(successCallback)
 
+  getFullTitle: ->
+    "#{@get('metadata')['full name']} (#{@get('metadata')["date published"]})"
+
   getXAxisField: ->
-    @get('metadata').axes.x.field
+    @get('metadata').axes.x.fields[0]
 
   getYAxisField: ->
-    @get('metadata').axes.y.field
+    @get('metadata').axes.y.fields[0]
 

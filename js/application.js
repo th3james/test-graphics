@@ -50,12 +50,16 @@
       }).done(successCallback);
     };
 
+    Indicator.prototype.getFullTitle = function() {
+      return "" + (this.get('metadata')['full name']) + " (" + (this.get('metadata')["date published"]) + ")";
+    };
+
     Indicator.prototype.getXAxisField = function() {
-      return this.get('metadata').axes.x.field;
+      return this.get('metadata').axes.x.fields[0];
     };
 
     Indicator.prototype.getYAxisField = function() {
-      return this.get('metadata').axes.y.field;
+      return this.get('metadata').axes.y.fields[0];
     };
 
     return Indicator;
@@ -123,27 +127,23 @@
     };
 
     StackedColumnView.prototype.getSeriesFromIndicator = function() {
-      var entry, fieldName, group, series, value, xAxisField, _i, _len, _ref3, _ref4;
+      var entry, fieldName, group, series, xAxisField, _i, _j, _len, _len1, _ref3, _ref4;
 
       xAxisField = this.indicator.getXAxisField();
       series = [];
-      if (this.indicator.get('data').length > 0) {
-        _ref3 = this.indicator.get('data')[0];
-        for (fieldName in _ref3) {
-          value = _ref3[fieldName];
-          if (fieldName !== xAxisField) {
-            group = {
-              name: fieldName,
-              data: []
-            };
-            _ref4 = this.indicator.get('data');
-            for (_i = 0, _len = _ref4.length; _i < _len; _i++) {
-              entry = _ref4[_i];
-              group.data.push(entry[fieldName]);
-            }
-            series.push(group);
-          }
+      _ref3 = this.indicator.get('metadata').axes.y.fields;
+      for (_i = 0, _len = _ref3.length; _i < _len; _i++) {
+        fieldName = _ref3[_i];
+        group = {
+          name: fieldName,
+          data: []
+        };
+        _ref4 = this.indicator.get('data');
+        for (_j = 0, _len1 = _ref4.length; _j < _len1; _j++) {
+          entry = _ref4[_j];
+          group.data.push(entry[fieldName]);
         }
+        series.push(group);
       }
       return series;
     };
@@ -157,15 +157,18 @@
           type: "column"
         },
         title: {
-          text: "Stacked column chart"
+          text: this.indicator.getFullTitle()
         },
         xAxis: {
-          categories: this.getCategoriesFromIndicator()
+          categories: this.getCategoriesFromIndicator(),
+          title: {
+            text: this.indicator.get('metadata').axes.x.name
+          }
         },
         yAxis: {
           min: 0,
           title: {
-            text: "Total fruit consumption"
+            text: this.indicator.get('metadata').axes.y.name
           },
           stackLabels: {
             enabled: true,
@@ -235,9 +238,12 @@
     };
 
     PieChartView.prototype.drawGraph = function() {
+      var xAxisField;
+
       if (this.indicator.get('metadata') == null) {
         return;
       }
+      xAxisField = this.indicator.getXAxisField();
       return this.$el.find("#container").highcharts({
         chart: {
           plotBackgroundColor: null,
@@ -245,7 +251,7 @@
           plotShadow: false
         },
         title: {
-          text: this.indicator.get('name')
+          text: this.indicator.getFullTitle()
         },
         tooltip: {
           pointFormat: "{series.name}: <b>{point.percentage}%</b>",
@@ -260,7 +266,10 @@
               color: "#000000",
               connectorColor: "#000000",
               formatter: function() {
-                return "<b>" + this.point.name + "</b>: " + this.percentage + " %";
+                var name;
+
+                name = this.point.name === 'Slice' ? this.point.x : this.point.name;
+                return "<b>" + name + "</b>: " + this.percentage + " %";
               }
             }
           }
@@ -268,7 +277,7 @@
         series: [
           {
             type: "pie",
-            name: this.indicator.get('name'),
+            name: this.indicator.get('metadata')['full name'],
             data: this.getSeriesFromIndicator()
           }
         ]

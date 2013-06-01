@@ -1,8 +1,16 @@
 {
+  "full name": "Recycling rates",
   "axes": {
     "x": {
-      "field": "year",
-      "type": "time"
+      "fields": ["year"],
+      "unit": "years",
+      "name": "Year"
+    },
+    "y": {
+      "fields": ["green recycling", "dry recycling", "target"],
+      "name": "Recycling rate (%)",
+      "unit": "%"
     }
-  }
+  },
+  "date published": "2009"
 }
