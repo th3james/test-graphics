@@ -77,12 +77,13 @@
     }
 
     MapIndicator.prototype.initialize = function(options) {
-      return this.layerName = options.layerName;
+      this.serviceName = options.serviceName;
+      return this.layer = options.layer;
     };
 
     MapIndicator.prototype.getMetadata = function(successCallback) {
       return $.ajax({
-        url: "json/map_indicators/" + (this.get('layerName')) + "/MapServer.json"
+        url: "json/map_indicators/" + (this.get('serviceName')) + "/MapServer/" + (this.get('layer')) + ".json"
       }).done(successCallback).fail(function(a, b, c) {
         return console.log("Error getting metdata!");
       });
@@ -90,7 +91,7 @@
 
     MapIndicator.prototype.getData = function(successCallback) {
       return $.ajax({
-        url: "json/map_indicators/" + (this.get('layerName')) + "/MapServer/find.json"
+        url: "json/map_indicators/" + (this.get('serviceName')) + "/MapServer/" + (this.get('layer')) + "/find.json"
       }).done(successCallback);
     };
 
@@ -336,7 +337,8 @@
 
     MapsView.prototype.initialize = function(options) {
       return this.mapIndicator = new Backbone.Models.MapIndicator({
-        layerName: "ESRI_StateCityHighway_USA"
+        serviceName: "ESRI_StateCityHighway_USA",
+        layer: 1
       });
     };
 

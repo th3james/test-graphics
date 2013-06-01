@@ -6,7 +6,8 @@ class Backbone.Views.MapsView extends Backbone.Diorama.NestingView
 
   initialize: (options) ->
     @mapIndicator = new Backbone.Models.MapIndicator(
-      layerName: "ESRI_StateCityHighway_USA"
+      serviceName: "ESRI_StateCityHighway_USA",
+      layer: 1
     )
 
   render: =>
