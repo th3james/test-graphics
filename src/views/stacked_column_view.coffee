@@ -9,6 +9,8 @@ class Backbone.Views.StackedColumnView extends Backbone.Views.IndicatorGraphicVi
     categories = []
     for entry in @indicator.get('data')
       categories.push(entry[xAxisField])
+
+    console.log categories
     return categories
 
   getSeriesFromIndicator: ->
@@ -22,6 +24,7 @@ class Backbone.Views.StackedColumnView extends Backbone.Views.IndicatorGraphicVi
         group.data.push entry[fieldName]
       series.push group
 
+    console.log series
     return series
 
   drawGraph: ->

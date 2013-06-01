@@ -7,8 +7,10 @@ class Backbone.Views.EsriStackedColumnView extends Backbone.Views.EsriMapIndicat
     xAxisField = @indicator.getXAxisField()
 
     categories = []
-    for entry in @indicator.get('data')
-      categories.push(entry[xAxisField])
+    for entry in @indicator.get('data').results
+      categories.push(entry.attributes[xAxisField])
+
+    console.log categories
     return categories
 
   getSeriesFromIndicator: ->
@@ -18,10 +20,11 @@ class Backbone.Views.EsriStackedColumnView extends Backbone.Views.EsriMapIndicat
 
     for fieldName in @indicator.get('metadata').axes.y.fields
       group = {name: fieldName, data: []}
-      for entry in @indicator.get('data')
-        group.data.push entry[fieldName]
+      for entry in @indicator.get('data').results
+        group.data.push parseFloat(entry.attributes[fieldName], 10)
       series.push group
 
+    console.log series
     return series
 
   drawGraph: ->

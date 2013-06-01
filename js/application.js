@@ -156,6 +156,7 @@
         entry = _ref4[_i];
         categories.push(entry[xAxisField]);
       }
+      console.log(categories);
       return categories;
     };
 
@@ -178,6 +179,7 @@
         }
         series.push(group);
       }
+      console.log(series);
       return series;
     };
 
@@ -371,11 +373,12 @@
 
       xAxisField = this.indicator.getXAxisField();
       categories = [];
-      _ref7 = this.indicator.get('data');
+      _ref7 = this.indicator.get('data').results;
       for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
         entry = _ref7[_i];
-        categories.push(entry[xAxisField]);
+        categories.push(entry.attributes[xAxisField]);
       }
+      console.log(categories);
       return categories;
     };
 
@@ -391,13 +394,14 @@
           name: fieldName,
           data: []
         };
-        _ref8 = this.indicator.get('data');
+        _ref8 = this.indicator.get('data').results;
         for (_j = 0, _len1 = _ref8.length; _j < _len1; _j++) {
           entry = _ref8[_j];
-          group.data.push(entry[fieldName]);
+          group.data.push(parseFloat(entry.attributes[fieldName], 10));
         }
         series.push(group);
       }
+      console.log(series);
       return series;
     };
 
