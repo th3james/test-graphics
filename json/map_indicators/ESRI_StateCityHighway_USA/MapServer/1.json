@@ -317,5 +317,17 @@
   "typeIdField" : null, 
   "types" : null, 
   "relationships" : [], 
-  "capabilities" : "Map,Query,Data"
+  "capabilities" : "Map,Query,Data",
+  "axes": {
+    "x": {
+      "fields": ["STATE_NAME"],
+      "unit": "text",
+      "name": "State name"
+    },
+    "y": {
+      "fields": ["AREA"],
+      "name": "Area",
+      "unit": "KM<sup>2</sup>"
+    }
+  }
 }

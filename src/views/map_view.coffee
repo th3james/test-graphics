@@ -10,9 +10,8 @@ class Backbone.Views.MapView extends Backbone.View
     @mapIndicator.fetchAllData(@render)
 
   render: =>
-    debugger
     if @mapIndicator.get('metadata')?
-      @$el.html(@template(name: @mapIndicator.get('metadata').name))
+      @$el.html(@template(name: @mapIndicator.get('metadata').name, mapIndicator: @mapIndicator))
     return @
 
   onClose: ->
