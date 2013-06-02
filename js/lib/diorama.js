@@ -119,7 +119,7 @@
     __extends(NestingView, _super);
 
     function NestingView() {
-      this.viewHelper = __bind(this.viewHelper, this);      Handlebars.registerHelper('subView', this.viewHelper);
+      this.addSubViewToView = __bind(this.addSubViewToView, this);      Handlebars.registerHelper('subView', this.addSubViewToView);
       NestingView.__super__.constructor.apply(this, arguments);
     }
 
@@ -156,6 +156,10 @@
         }
       }
       return this.subViews = [];
+    };
+
+    NestingView.prototype.addSubViewToView = function(view, subViewName, options) {
+      return this.viewHelper.call(view, subViewName, options);
     };
 
     NestingView.prototype.viewHelper = function(viewName, options) {

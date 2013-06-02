@@ -20,7 +20,7 @@ class Backbone.Views.MapsView extends Backbone.Diorama.NestingView
 
   render: =>
     @closeSubViews()
-    @$el.html(@template(models: @mapIndicators))
+    @$el.html(@template(view: @, models: @mapIndicators))
     @renderSubViews()
 
     return @

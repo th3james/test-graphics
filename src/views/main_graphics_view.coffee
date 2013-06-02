@@ -14,7 +14,7 @@ class Backbone.Views.MainGraphicsView extends Backbone.Diorama.NestingView
     # Close any existing views
     @closeSubViews()
 
-    @$el.html(@template())
+    @$el.html(@template(view: @))
 
     # Render sub views into the elements created by subView helper in the template
     @renderSubViews()
