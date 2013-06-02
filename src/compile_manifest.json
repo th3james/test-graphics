@@ -11,6 +11,8 @@
   "views/maps_view",
   "templates/map",
   "views/map_view",
+  "templates/esri_map",
+  "views/esri_map_view",
   "controllers/main_controller",
   "templates/main_graphics",
   "views/main_graphics_view"

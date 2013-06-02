@@ -1,9 +1,9 @@
-(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["indicator_graphic.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h="function",i=this.escapeExpression;return f+="<h1>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===h?g.apply(b):g),f+=i(g)+'</h1>\n<div id="container"></div>\n',f}),b["maps.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>ESRI service graphics</h1>\n<p>\n  Graphics generated from JSON APIs based on ESRI services. I added axes data to\n  the basic layer descriptor to make automatic generation of graphics possible.\n  Check the README for details.\n</p>\n<a href='#' id=\"switch-to-environment\">Switch to map layer indicators</a>\n",h={hash:{model:b.model},data:e},f+=j((g=c.subView,g?g.call(b,"MapView",h):i.call(b,"subView","MapView",h)))+"\n",f}),b["map.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return h={hash:{mapIndicator:b.mapIndicator},data:e},f+=j((g=c.subView,g?g.call(b,"EsriStackedColumnView",h):i.call(b,"subView","EsriStackedColumnView",h)))+"\n",f}),b["main_graphics.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>Environment in my Pocket</h1>\n<p>\n  This data is based on the data in the government 'Environement in my Pocket'\n  report. The JSON was constructed by hand, containing metadata and data API\n  points. The data was constructed to determine the viability of auto generating\n  maps, and what fields would be needed in the metadata description.\n</p>\n<a href='#' id=\"switch-to-esri\">Switch to esri layer indicators</a>\n",h={hash:{indicatorName:"recycling_rates"},data:e},f+=j((g=c.subView,g?g.call(b,"StackedColumnView",h):i.call(b,"subView","StackedColumnView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.subView,g?g.call(b,"PieChartView",h):i.call(b,"subView","PieChartView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.subView,g?g.call(b,"StackedColumnView",h):i.call(b,"subView","StackedColumnView",h)))+"\n",f})})()
+(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["indicator_graphic.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h="function",i=this.escapeExpression;return f+="<h1>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===h?g.apply(b):g),f+=i(g)+'</h1>\n<div id="container"></div>\n',f}),b["maps.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>ESRI service graphics</h1>\n<p>\n  Graphics generated from JSON APIs based on ESRI services. I added axes data to\n  the basic layer descriptor to make automatic generation of graphics possible.\n  Check the README for details.\n</p>\n<a href='#' id=\"switch-to-environment\">Switch to envionment in pocket 'ideal' data</a>\n",h={hash:{model:b.model},data:e},f+=j((g=c.subView,g?g.call(b,"MapView",h):i.call(b,"subView","MapView",h)))+"\n",f}),b["map.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return h={hash:{mapIndicator:b.mapIndicator},data:e},f+=j((g=c.subView,g?g.call(b,"EsriStackedColumnView",h):i.call(b,"subView","EsriStackedColumnView",h)))+"\n",h={hash:{mapIndicator:b.mapIndicator},data:e},f+=j((g=c.subView,g?g.call(b,"EsriMapView",h):i.call(b,"subView","EsriMapView",h)))+"\n",f}),b["esri_map.hbs"]=a(function(a,b,c,d,e){return this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{},'<div class="map"></div>\n'}),b["main_graphics.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>Environment in my Pocket</h1>\n<p>\n  This data is based on the data in the government 'Environement in my Pocket'\n  report. The JSON was constructed by hand, containing metadata and data API\n  points. The data was constructed to determine the viability of auto generating\n  maps, and what fields would be needed in the metadata description.\n</p>\n<a href='#' id=\"switch-to-esri\">Switch to esri layer indicators</a>\n",h={hash:{indicatorName:"recycling_rates"},data:e},f+=j((g=c.subView,g?g.call(b,"StackedColumnView",h):i.call(b,"subView","StackedColumnView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.subView,g?g.call(b,"PieChartView",h):i.call(b,"subView","PieChartView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.subView,g?g.call(b,"StackedColumnView",h):i.call(b,"subView","StackedColumnView",h)))+"\n",f})})()
 
 ;
 // Generated by CoffeeScript 1.6.2
 (function() {
-  var _base, _base1, _base10, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _base9, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9,
+  var _base, _base1, _base10, _base11, _base2, _base3, _base4, _base5, _base6, _base7, _base8, _base9, _ref, _ref1, _ref10, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
@@ -97,6 +97,10 @@
       return $.ajax({
         url: "json/map_indicators/" + (this.get('serviceName')) + "/MapServer/" + (this.get('layer')) + "/find.json"
       }).done(successCallback);
+    };
+
+    MapIndicator.prototype.getWMSAddress = function() {
+      return "http://sampleserver1.arcgisonline.com/ArcGIS/services/Specialty/" + this.serviceName + "/MapServer/WMSServer";
     };
 
     return MapIndicator;
@@ -556,7 +560,50 @@
 
   window.Backbone || (window.Backbone = {});
 
-  (_base9 = window.Backbone).Controllers || (_base9.Controllers = {});
+  (_base9 = window.Backbone).Views || (_base9.Views = {});
+
+  Backbone.Views.EsriMapView = (function(_super) {
+    __extends(EsriMapView, _super);
+
+    function EsriMapView() {
+      _ref9 = EsriMapView.__super__.constructor.apply(this, arguments);
+      return _ref9;
+    }
+
+    EsriMapView.prototype.template = Handlebars.templates['esri_map.hbs'];
+
+    EsriMapView.prototype.initialize = function(options) {
+      this.mapIndicator = options.mapIndicator;
+      return this.render();
+    };
+
+    EsriMapView.prototype.render = function() {
+      this.$el.html(this.template());
+      this.createMap();
+      return this;
+    };
+
+    EsriMapView.prototype.createMap = function() {
+      this.map = L.map(this.$el.find(".map")[0]).setView([41.508577, -99.84375], 5);
+      L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
+      }).addTo(this.map);
+      return L.tileLayer.wms(this.mapIndicator.getWMSAddress(), {
+        layers: this.mapIndicator.layer,
+        format: 'image/png',
+        transparent: true
+      }).addTo(this.map);
+    };
+
+    EsriMapView.prototype.onClose = function() {};
+
+    return EsriMapView;
+
+  })(Backbone.View);
+
+  window.Backbone || (window.Backbone = {});
+
+  (_base10 = window.Backbone).Controllers || (_base10.Controllers = {});
 
   Backbone.Controllers.MainController = (function(_super) {
     __extends(MainController, _super);
@@ -598,14 +645,14 @@
 
   window.Backbone || (window.Backbone = {});
 
-  (_base10 = window.Backbone).Views || (_base10.Views = {});
+  (_base11 = window.Backbone).Views || (_base11.Views = {});
 
   Backbone.Views.MainGraphicsView = (function(_super) {
     __extends(MainGraphicsView, _super);
 
     function MainGraphicsView() {
-      _ref9 = MainGraphicsView.__super__.constructor.apply(this, arguments);
-      return _ref9;
+      _ref10 = MainGraphicsView.__super__.constructor.apply(this, arguments);
+      return _ref10;
     }
 
     MainGraphicsView.prototype.template = Handlebars.templates['main_graphics.hbs'];

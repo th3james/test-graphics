@@ -19,3 +19,6 @@ class window.Backbone.Models.MapIndicator extends Backbone.Models.Indicator
     $.ajax(
       url: "json/map_indicators/#{@get('serviceName')}/MapServer/#{@get('layer')}/find.json"
     ).done(successCallback)
+
+  getWMSAddress: ->
+    "http://sampleserver1.arcgisonline.com/ArcGIS/services/Specialty/#{@serviceName}/MapServer/WMSServer"
