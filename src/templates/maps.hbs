@@ -5,4 +5,6 @@
   Check the README for details.
 </p>
 <a href='#' id="switch-to-environment">Switch to envionment in pocket 'ideal' data</a>
-{{subView "MapView" model=model}}
+{{#each models }}
+  {{subView "MapView" model=this}}
+{{/each }}

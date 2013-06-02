@@ -1,4 +1,4 @@
-(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["indicator_graphic.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h="function",i=this.escapeExpression;return f+="<h1>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===h?g.apply(b):g),f+=i(g)+'</h1>\n<div id="container"></div>\n',f}),b["maps.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>ESRI service graphics</h1>\n<p>\n  Graphics generated from JSON APIs based on ESRI services. I added axes data to\n  the basic layer descriptor to make automatic generation of graphics possible.\n  Check the README for details.\n</p>\n<a href='#' id=\"switch-to-environment\">Switch to envionment in pocket 'ideal' data</a>\n",h={hash:{model:b.model},data:e},f+=j((g=c.subView,g?g.call(b,"MapView",h):i.call(b,"subView","MapView",h)))+"\n",f}),b["map.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return h={hash:{mapIndicator:b.mapIndicator},data:e},f+=j((g=c.subView,g?g.call(b,"EsriStackedColumnView",h):i.call(b,"subView","EsriStackedColumnView",h)))+"\n",h={hash:{mapIndicator:b.mapIndicator},data:e},f+=j((g=c.subView,g?g.call(b,"EsriMapView",h):i.call(b,"subView","EsriMapView",h)))+"\n",f}),b["esri_map.hbs"]=a(function(a,b,c,d,e){return this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{},'<div class="map"></div>\n'}),b["main_graphics.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>Environment in my Pocket</h1>\n<p>\n  This data is based on the data in the government 'Environement in my Pocket'\n  report. The JSON was constructed by hand, containing metadata and data API\n  points. The data was constructed to determine the viability of auto generating\n  maps, and what fields would be needed in the metadata description.\n</p>\n<a href='#' id=\"switch-to-esri\">Switch to esri layer indicators</a>\n",h={hash:{indicatorName:"recycling_rates"},data:e},f+=j((g=c.subView,g?g.call(b,"StackedColumnView",h):i.call(b,"subView","StackedColumnView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.subView,g?g.call(b,"PieChartView",h):i.call(b,"subView","PieChartView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.subView,g?g.call(b,"StackedColumnView",h):i.call(b,"subView","StackedColumnView",h)))+"\n",f})})()
+(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["indicator_graphic.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h="function",i=this.escapeExpression;return f+="<h1>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===h?g.apply(b):g),f+=i(g)+'</h1>\n<div id="container"></div>\n',f}),b["maps.hbs"]=a(function(a,b,c,d,e){function k(a,b){var d="",e,f;return d+="\n  ",f={hash:{model:a},data:b},d+=i((e=c.subView,e?e.call(a,"MapView",f):h.call(a,"subView","MapView",f)))+"\n",d}this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h=c.helperMissing,i=this.escapeExpression,j=this;f+="<h1>ESRI service graphics</h1>\n<p>\n  Graphics generated from JSON APIs based on ESRI services. I added axes data to\n  the basic layer descriptor to make automatic generation of graphics possible.\n  Check the README for details.\n</p>\n<a href='#' id=\"switch-to-environment\">Switch to envionment in pocket 'ideal' data</a>\n",g=c.each.call(b,b.models,{hash:{},inverse:j.noop,fn:j.program(1,k,e),data:e});if(g||g===0)f+=g;return f+="\n",f}),b["map.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i="function",j=this.escapeExpression,k=c.helperMissing;return f+="<h3>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===i?g.apply(b):g),f+=j(g)+" ESRI layer</h3>\n",h={hash:{mapIndicator:b.mapIndicator},data:e},f+=j((g=c.subView,g?g.call(b,"EsriStackedColumnView",h):k.call(b,"subView","EsriStackedColumnView",h)))+"\n",h={hash:{mapIndicator:b.mapIndicator},data:e},f+=j((g=c.subView,g?g.call(b,"EsriMapView",h):k.call(b,"subView","EsriMapView",h)))+"\n",f}),b["esri_map.hbs"]=a(function(a,b,c,d,e){return this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{},'<h4>ESRI WMS map layer</h4>\n<div class="map"></div>\n'}),b["main_graphics.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>Environment in my Pocket</h1>\n<p>\n  This data is based on the data in the government 'Environement in my Pocket'\n  report. The JSON was constructed by hand, containing metadata and data API\n  points. The data was constructed to determine the viability of auto generating\n  maps, and what fields would be needed in the metadata description.\n</p>\n<a href='#' id=\"switch-to-esri\">Switch to esri layer indicators</a>\n",h={hash:{indicatorName:"recycling_rates"},data:e},f+=j((g=c.subView,g?g.call(b,"StackedColumnView",h):i.call(b,"subView","StackedColumnView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.subView,g?g.call(b,"PieChartView",h):i.call(b,"subView","PieChartView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.subView,g?g.call(b,"StackedColumnView",h):i.call(b,"subView","StackedColumnView",h)))+"\n",f})})()
 
 ;
 // Generated by CoffeeScript 1.6.2
@@ -492,16 +492,21 @@
     };
 
     MapsView.prototype.initialize = function(options) {
-      return this.mapIndicator = new Backbone.Models.MapIndicator({
+      this.mapIndicators = [];
+      this.mapIndicators.push(new Backbone.Models.MapIndicator({
         serviceName: "ESRI_StateCityHighway_USA",
         layer: 1
-      });
+      }));
+      return this.mapIndicators.push(new Backbone.Models.MapIndicator({
+        serviceName: "ESRI_StateCityHighway_USA",
+        layer: 0
+      }));
     };
 
     MapsView.prototype.render = function() {
       this.closeSubViews();
       this.$el.html(this.template({
-        model: this.mapIndicator
+        models: this.mapIndicators
       }));
       this.renderSubViews();
       return this;
@@ -539,13 +544,14 @@
     };
 
     MapView.prototype.render = function() {
-      this.closeSubViews();
       if (this.mapIndicator.get('metadata') != null) {
+        this.closeSubViews();
         this.$el.html(this.template({
           name: this.mapIndicator.get('metadata').name,
           mapIndicator: this.mapIndicator
         }));
         this.renderSubViews();
+        window.mapView = this;
       }
       return this;
     };
@@ -566,20 +572,20 @@
     __extends(EsriMapView, _super);
 
     function EsriMapView() {
-      _ref9 = EsriMapView.__super__.constructor.apply(this, arguments);
+      this.render = __bind(this.render, this);      _ref9 = EsriMapView.__super__.constructor.apply(this, arguments);
       return _ref9;
     }
 
     EsriMapView.prototype.template = Handlebars.templates['esri_map.hbs'];
 
     EsriMapView.prototype.initialize = function(options) {
-      this.mapIndicator = options.mapIndicator;
-      return this.render();
+      return this.mapIndicator = options.mapIndicator;
     };
 
     EsriMapView.prototype.render = function() {
       this.$el.html(this.template());
       this.createMap();
+      console.log("" + this.constructor.name + "." + this.cid + ": " + (this.mapIndicator.get('metadata').name) + " rendered");
       return this;
     };
 
@@ -612,7 +618,7 @@
       this.esri = __bind(this.esri, this);
       this.environment = __bind(this.environment, this);      this.mainRegion = new Backbone.Diorama.ManagedRegion();
       $('body').append(this.mainRegion.$el);
-      this.environment();
+      this.esri();
     }
 
     MainController.prototype.environment = function() {

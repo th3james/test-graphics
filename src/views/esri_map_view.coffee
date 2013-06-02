@@ -6,11 +6,11 @@ class Backbone.Views.EsriMapView extends Backbone.View
 
   initialize: (options) ->
     @mapIndicator = options.mapIndicator
-    @render()
 
-  render: ->
+  render: =>
     @$el.html(@template())
     @createMap()
+    console.log "#{@constructor.name}.#{@cid}: #{@mapIndicator.get('metadata').name} rendered"
     return @
   
   createMap: ->

@@ -10,10 +10,11 @@ class Backbone.Views.MapView extends Backbone.Diorama.NestingView
     @mapIndicator.fetchAllData(@render)
 
   render: =>
-    @closeSubViews()
     if @mapIndicator.get('metadata')?
+      @closeSubViews()
       @$el.html(@template(name: @mapIndicator.get('metadata').name, mapIndicator: @mapIndicator))
       @renderSubViews()
+      window.mapView = @
     return @
 
   onClose: ->

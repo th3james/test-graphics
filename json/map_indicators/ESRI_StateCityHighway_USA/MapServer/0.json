@@ -1,0 +1,112 @@
+{
+  "currentVersion" : 10.01, 
+  "id" : 0, 
+  "name" : "ushigh", 
+  "type" : "Feature Layer", 
+  "description" : "This service provides census information for U.S. cities and states including total population, racial counts, and more. It also includes highways. \n", 
+  "definitionExpression" : "", 
+  "geometryType" : "esriGeometryPolyline", 
+  "copyrightText" : "(c) ESRI and its data partners", 
+  "parentLayer" : null, 
+  "subLayers" : [], 
+  "minScale" : 0, 
+  "maxScale" : 0, 
+  "defaultVisibility" : true, 
+  "extent" : {
+    "xmin" : -158.204086303711, 
+    "ymin" : 19.0670623779298, 
+    "xmax" : -67.0972431225637, 
+    "ymax" : 70.3192330240338, 
+    "spatialReference" : {
+      "wkid" : 4326
+    }
+  }, 
+  "hasAttachments" : false, 
+  "htmlPopupType" : "esriServerHTMLPopupTypeNone", 
+  "drawingInfo" : {"renderer" : 
+    {
+      "type" : "simple", 
+      "symbol" : 
+      {
+        "type" : "esriSLS", 
+        "style" : "esriSLSSolid", 
+        
+        "color" : [
+          250, 
+          52, 
+          17, 
+          255
+        ], 
+        "width" : 1.7
+      }, 
+      "label" : "", 
+      "description" : ""
+    }, 
+    "transparency" : 0, 
+    "labelingInfo" : null}, 
+  "displayField" : "TYPE", 
+  "fields" : [
+    {
+      "name" : "OBJECTID", 
+      "type" : "esriFieldTypeOID", 
+      "alias" : "OBJECTID"}, 
+    {
+      "name" : "Shape", 
+      "type" : "esriFieldTypeGeometry", 
+      "alias" : "Shape"}, 
+    {
+      "name" : "LENGTH", 
+      "type" : "esriFieldTypeDouble", 
+      "alias" : "LENGTH"}, 
+    {
+      "name" : "TYPE", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "TYPE", 
+      "length" : 40}, 
+    {
+      "name" : "ADMN_CLASS", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "ADMN_CLASS", 
+      "length" : 20}, 
+    {
+      "name" : "TOLL_RD", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "TOLL_RD", 
+      "length" : 1}, 
+    {
+      "name" : "RTE_NUM1", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "RTE_NUM1", 
+      "length" : 3}, 
+    {
+      "name" : "RTE_NUM2", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "RTE_NUM2", 
+      "length" : 3}, 
+    {
+      "name" : "ROUTE", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "ROUTE", 
+      "length" : 40}, 
+    {
+      "name" : "Shape_Length", 
+      "type" : "esriFieldTypeDouble", 
+      "alias" : "Shape_Length"}
+  ], 
+  "typeIdField" : null, 
+  "types" : null, 
+  "relationships" : [], 
+  "capabilities" : "Map,Query,Data",
+  "axes": {
+    "x": {
+      "fields": ["ROUTE"],
+      "unit": "text",
+      "name": "Route name"
+    },
+    "y": {
+      "fields": ["LENGTH"],
+      "name": "Distance",
+      "unit": "KM"
+    }
+  }
+}

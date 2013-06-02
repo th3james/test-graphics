@@ -7,7 +7,7 @@ class Backbone.Controllers.MainController extends Backbone.Diorama.Controller
     $('body').append(@mainRegion.$el)
     
     # Default state
-    @environment()
+    @esri()
 
 
   environment: =>

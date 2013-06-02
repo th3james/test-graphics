@@ -1,0 +1,232 @@
+{
+  "results" : [
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Interstate (PA/NY/CT)  84", 
+      "attributes" : {
+        "OBJECTID" : "51", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "45.667", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "84", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Interstate (PA/NY/CT)  84", 
+        "Shape_Length" : "0.787161"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Interstate (PA/NY/CT)  84", 
+      "attributes" : {
+        "OBJECTID" : "67", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "32.64", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "84", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Interstate (PA/NY/CT)  84", 
+        "Shape_Length" : "0.579022"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Interstate (PA/NY/CT)  84", 
+      "attributes" : {
+        "OBJECTID" : "68", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "59.037", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "84", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Interstate (PA/NY/CT)  84", 
+        "Shape_Length" : "1.053375"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Interstate (PA/NY/CT)  84", 
+      "attributes" : {
+        "OBJECTID" : "72", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "85.259", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "84", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Interstate (PA/NY/CT)  84", 
+        "Shape_Length" : "1.60484"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Interstate (CO)  76", 
+      "attributes" : {
+        "OBJECTID" : "163", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "181.315", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "76", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Interstate (CO)  76", 
+        "Shape_Length" : "3.229986"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Interstate (DC) 495", 
+      "attributes" : {
+        "OBJECTID" : "185", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "1.737", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "495", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Interstate (DC) 495", 
+        "Shape_Length" : "0.031869"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Interstate (DC) 495", 
+      "attributes" : {
+        "OBJECTID" : "187", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "9.177", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "495", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Interstate (DC) 495", 
+        "Shape_Length" : "0.168882"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Interstate (DC) 495", 
+      "attributes" : {
+        "OBJECTID" : "190", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "9.746", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "495", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Interstate (DC) 495", 
+        "Shape_Length" : "0.15018"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Interstate (DC) 495", 
+      "attributes" : {
+        "OBJECTID" : "195", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "7.562", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "495", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Interstate (DC) 495", 
+        "Shape_Length" : "0.116984"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Kentucky State Hwy 402", 
+      "attributes" : {
+        "OBJECTID" : "210", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "83.071", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "State Highway", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "402", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Kentucky State Hwy 402", 
+        "Shape_Length" : "1.453573"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Kentucky State Hwy  80", 
+      "attributes" : {
+        "OBJECTID" : "227", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "19.608", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "80", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Kentucky State Hwy  80", 
+        "Shape_Length" : "0.355173"
+      }
+    }, 
+    {
+      "layerId" : 0, 
+      "layerName" : "ushigh", 
+      "displayFieldName" : "TYPE", 
+      "foundFieldName" : "ROUTE", 
+      "value" : "Kentucky State Hwy  80", 
+      "attributes" : {
+        "OBJECTID" : "622", 
+        "Shape" : "Polyline", 
+        "LENGTH" : "51.992", 
+        "TYPE" : "Multi-Lane Divided", 
+        "ADMN_CLASS" : "Interstate", 
+        "TOLL_RD" : "N", 
+        "RTE_NUM1" : "80", 
+        "RTE_NUM2" : "", 
+        "ROUTE" : "Kentucky State Hwy  80", 
+        "Shape_Length" : "0.862159"
+      }
+    }
+  ]
+}
