@@ -1,6 +1,6 @@
 [
   "models/indicator",
-  "models/map_indicator",
+  "models/esri_indicator",
   "templates/indicator_graphic",
   "views/indicator_graphic_view",
   "views/stacked_column_view",

@@ -119,14 +119,30 @@
     __extends(NestingView, _super);
 
     function NestingView() {
-      this.addSubViewToView = __bind(this.addSubViewToView, this);      Handlebars.registerHelper('subView', this.addSubViewToView);
+      this.addSubViewTo = __bind(this.addSubViewTo, this);      Handlebars.registerHelper('addSubViewTo', this.addSubViewTo);
       NestingView.__super__.constructor.apply(this, arguments);
     }
 
-    NestingView.prototype.addSubView = function(subView) {
+    NestingView.prototype.addSubViewTo = function(view, subViewName, options) {
+      return this.addSubView.call(view, subViewName, options);
+    };
+
+    NestingView.prototype.addSubView = function(viewName, options) {
+      var View, view, viewOptions;
+
+      viewOptions = options.hash || {};
+      View = Backbone.Views[viewName];
+      view = new View(viewOptions);
       this.subViews || (this.subViews = []);
-      this.subViews.push(subView);
-      return "<" + subView.tagName + " data-sub-view-cid=\"" + subView.cid + "\"></" + subView.tagName + ">";
+      this.subViews.push(view);
+      return this.generateSubViewPlaceholderTag(view);
+    };
+
+    NestingView.prototype.generateSubViewPlaceholderTag = function(subView) {
+      var html;
+
+      html = "<" + subView.tagName + " data-sub-view-cid=\"" + subView.cid + "\"></" + subView.tagName + ">";
+      return new Handlebars.SafeString(html);
     };
 
     NestingView.prototype.renderSubViews = function() {
@@ -156,20 +172,6 @@
         }
       }
       return this.subViews = [];
-    };
-
-    NestingView.prototype.addSubViewToView = function(view, subViewName, options) {
-      return this.viewHelper.call(view, subViewName, options);
-    };
-
-    NestingView.prototype.viewHelper = function(viewName, options) {
-      var View, html, view, viewOptions;
-
-      viewOptions = options.hash || {};
-      View = Backbone.Views[viewName];
-      view = new View(viewOptions);
-      html = this.addSubView(view);
-      return new Handlebars.SafeString(html);
     };
 
     return NestingView;

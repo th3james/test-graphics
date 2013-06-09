@@ -5,12 +5,11 @@ class Backbone.Views.EsriMapView extends Backbone.View
   template: Handlebars.templates['esri_map.hbs']
 
   initialize: (options) ->
-    @mapIndicator = options.mapIndicator
+    @esriIndicator = options.esriIndicator
 
   render: =>
     @$el.html(@template())
     @createMap()
-    console.log "#{@constructor.name}.#{@cid}: #{@mapIndicator.get('metadata').name} rendered"
     return @
   
   createMap: ->
@@ -26,8 +25,8 @@ class Backbone.Views.EsriMapView extends Backbone.View
     ).addTo @map
 
     # Add map indicator layer
-    L.tileLayer.wms(@mapIndicator.getWMSAddress(),
-      layers: @mapIndicator.layer,
+    L.tileLayer.wms(@esriIndicator.getWMSAddress(),
+      layers: @esriIndicator.layer,
       format: 'image/png',
       transparent: true
     ).addTo @map

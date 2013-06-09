@@ -5,7 +5,7 @@ class Backbone.Views.EsriMapIndicatorGraphicView extends Backbone.View
   template: Handlebars.templates['indicator_graphic.hbs']
 
   initialize: (options) ->
-    @indicator = options.mapIndicator
+    @indicator = options.esriIndicator
 
     @render()
 

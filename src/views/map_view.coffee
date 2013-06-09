@@ -5,14 +5,14 @@ class Backbone.Views.MapView extends Backbone.Diorama.NestingView
   template: Handlebars.templates['map.hbs']
 
   initialize: (options) ->
-    @mapIndicator = options.model
+    @esriIndicator = options.model
 
-    @mapIndicator.fetchAllData(@render)
+    @esriIndicator.fetchAllData(@render)
 
   render: =>
-    if @mapIndicator.get('metadata')?
+    if @esriIndicator.get('metadata')?
       @closeSubViews()
-      @$el.html(@template(view: @, name: @mapIndicator.get('metadata').name, mapIndicator: @mapIndicator))
+      @$el.html(@template(view: @, name: @esriIndicator.get('metadata').name, esriIndicator: @esriIndicator))
       @renderSubViews()
       window.mapView = @
     return @

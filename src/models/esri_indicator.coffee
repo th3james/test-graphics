@@ -1,6 +1,6 @@
 window.Backbone.Models || = {}
 
-class window.Backbone.Models.MapIndicator extends Backbone.Models.Indicator
+class window.Backbone.Models.EsriIndicator extends Backbone.Models.Indicator
   initialize: (options) ->
     @serviceName = options.serviceName
     @layer = options.layer

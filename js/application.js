@@ -1,4 +1,4 @@
-(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["indicator_graphic.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h="function",i=this.escapeExpression;return f+="<h1>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===h?g.apply(b):g),f+=i(g)+'</h1>\n<div id="container"></div>\n',f}),b["maps.hbs"]=a(function(a,b,c,d,e){function k(a,b,d){var e="",f,g;return e+="\n  ",g={hash:{model:a},data:b},e+=i((f=c.subView,f?f.call(a,d.view,"MapView",g):h.call(a,"subView",d.view,"MapView",g)))+"\n",e}this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h=c.helperMissing,i=this.escapeExpression,j=this;f+="<h1>ESRI service graphics</h1>\n<p>\n  Graphics generated from JSON APIs based on ESRI services. I added axes data to\n  the basic layer descriptor to make automatic generation of graphics possible.\n  Check the README for details.\n</p>\n<a href='#' id=\"switch-to-environment\">Switch to envionment in pocket 'ideal' data</a>\n",g=c.each.call(b,b.models,{hash:{},inverse:j.noop,fn:j.programWithDepth(k,e,b),data:e});if(g||g===0)f+=g;return f+="\n",f}),b["map.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i="function",j=this.escapeExpression,k=c.helperMissing;return f+="<h3>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===i?g.apply(b):g),f+=j(g)+" ESRI layer</h3>\n",h={hash:{mapIndicator:b.mapIndicator},data:e},f+=j((g=c.subView,g?g.call(b,b.view,"EsriStackedColumnView",h):k.call(b,"subView",b.view,"EsriStackedColumnView",h)))+"\n",h={hash:{mapIndicator:b.mapIndicator},data:e},f+=j((g=c.subView,g?g.call(b,b.view,"EsriMapView",h):k.call(b,"subView",b.view,"EsriMapView",h)))+"\n",f}),b["esri_map.hbs"]=a(function(a,b,c,d,e){return this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{},'<h4>ESRI WMS map layer</h4>\n<div class="map"></div>\n'}),b["main_graphics.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>Environment in my Pocket</h1>\n<p>\n  This data is based on the data in the government 'Environement in my Pocket'\n  report. The JSON was constructed by hand, containing metadata and data API\n  points. The data was constructed to determine the viability of auto generating\n  maps, and what fields would be needed in the metadata description.\n</p>\n<a href='#' id=\"switch-to-esri\">Switch to esri layer indicators</a>\n",h={hash:{indicatorName:"recycling_rates"},data:e},f+=j((g=c.subView,g?g.call(b,b.view,"StackedColumnView",h):i.call(b,"subView",b.view,"StackedColumnView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.subView,g?g.call(b,b.view,"PieChartView",h):i.call(b,"subView",b.view,"PieChartView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.subView,g?g.call(b,b.view,"StackedColumnView",h):i.call(b,"subView",b.view,"StackedColumnView",h)))+"\n",f})})()
+(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["indicator_graphic.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h="function",i=this.escapeExpression;return f+="<h1>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===h?g.apply(b):g),f+=i(g)+'</h1>\n<div id="container"></div>\n',f}),b["maps.hbs"]=a(function(a,b,c,d,e){function k(a,b,d){var e="",f,g;return e+="\n  ",g={hash:{model:a},data:b},e+=i((f=c.addSubViewTo,f?f.call(a,d.view,"MapView",g):h.call(a,"addSubViewTo",d.view,"MapView",g)))+"\n",e}this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h=c.helperMissing,i=this.escapeExpression,j=this;f+="<h1>ESRI service graphics</h1>\n<p>\n  Graphics generated from JSON APIs based on ESRI services. I added axes data to\n  the basic layer descriptor to make automatic generation of graphics possible.\n  Check the README for details.\n</p>\n<a href='#' id=\"switch-to-environment\">Switch to envionment in pocket 'ideal' data</a>\n",g=c.each.call(b,b.models,{hash:{},inverse:j.noop,fn:j.programWithDepth(k,e,b),data:e});if(g||g===0)f+=g;return f+="\n",f}),b["map.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i="function",j=this.escapeExpression,k=c.helperMissing;return f+="<h3>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===i?g.apply(b):g),f+=j(g)+" ESRI layer</h3>\n",h={hash:{esriIndicator:b.esriIndicator},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"EsriStackedColumnView",h):k.call(b,"addSubViewTo",b.view,"EsriStackedColumnView",h)))+"\n",h={hash:{esriIndicator:b.esriIndicator},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"EsriMapView",h):k.call(b,"addSubViewTo",b.view,"EsriMapView",h)))+"\n",f}),b["esri_map.hbs"]=a(function(a,b,c,d,e){return this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{},'<h4>ESRI WMS map layer</h4>\n<div class="map"></div>\n'}),b["main_graphics.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>Environment in my Pocket</h1>\n<p>\n  This data is based on the data in the government 'Environement in my Pocket'\n  report. The JSON was constructed by hand, containing metadata and data API\n  points. The data was constructed to determine the viability of auto generating\n  maps, and what fields would be needed in the metadata description.\n</p>\n<a href='#' id=\"switch-to-esri\">Switch to esri layer indicators</a>\n",h={hash:{indicatorName:"recycling_rates"},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"StackedColumnView",h):i.call(b,"addSubViewTo",b.view,"StackedColumnView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"PieChartView",h):i.call(b,"addSubViewTo",b.view,"PieChartView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"StackedColumnView",h):i.call(b,"addSubViewTo",b.view,"StackedColumnView",h)))+"\n",f})})()
 
 ;
 // Generated by CoffeeScript 1.6.2
@@ -68,24 +68,24 @@
 
   (_base1 = window.Backbone).Models || (_base1.Models = {});
 
-  window.Backbone.Models.MapIndicator = (function(_super) {
-    __extends(MapIndicator, _super);
+  window.Backbone.Models.EsriIndicator = (function(_super) {
+    __extends(EsriIndicator, _super);
 
-    function MapIndicator() {
-      _ref1 = MapIndicator.__super__.constructor.apply(this, arguments);
+    function EsriIndicator() {
+      _ref1 = EsriIndicator.__super__.constructor.apply(this, arguments);
       return _ref1;
     }
 
-    MapIndicator.prototype.initialize = function(options) {
+    EsriIndicator.prototype.initialize = function(options) {
       this.serviceName = options.serviceName;
       return this.layer = options.layer;
     };
 
-    MapIndicator.prototype.getFullTitle = function() {
+    EsriIndicator.prototype.getFullTitle = function() {
       return this.get('metadata').name;
     };
 
-    MapIndicator.prototype.getMetadata = function(successCallback) {
+    EsriIndicator.prototype.getMetadata = function(successCallback) {
       return $.ajax({
         url: "json/map_indicators/" + (this.get('serviceName')) + "/MapServer/" + (this.get('layer')) + ".json"
       }).done(successCallback).fail(function(a, b, c) {
@@ -93,17 +93,17 @@
       });
     };
 
-    MapIndicator.prototype.getData = function(successCallback) {
+    EsriIndicator.prototype.getData = function(successCallback) {
       return $.ajax({
         url: "json/map_indicators/" + (this.get('serviceName')) + "/MapServer/" + (this.get('layer')) + "/find.json"
       }).done(successCallback);
     };
 
-    MapIndicator.prototype.getWMSAddress = function() {
+    EsriIndicator.prototype.getWMSAddress = function() {
       return "http://sampleserver1.arcgisonline.com/ArcGIS/services/Specialty/" + this.serviceName + "/MapServer/WMSServer";
     };
 
-    return MapIndicator;
+    return EsriIndicator;
 
   })(Backbone.Models.Indicator);
 
@@ -344,7 +344,7 @@
     EsriMapIndicatorGraphicView.prototype.template = Handlebars.templates['indicator_graphic.hbs'];
 
     EsriMapIndicatorGraphicView.prototype.initialize = function(options) {
-      this.indicator = options.mapIndicator;
+      this.indicator = options.esriIndicator;
       return this.render();
     };
 
@@ -492,12 +492,12 @@
     };
 
     MapsView.prototype.initialize = function(options) {
-      this.mapIndicators = [];
-      this.mapIndicators.push(new Backbone.Models.MapIndicator({
+      this.esriIndicators = [];
+      this.esriIndicators.push(new Backbone.Models.EsriIndicator({
         serviceName: "ESRI_StateCityHighway_USA",
         layer: 1
       }));
-      return this.mapIndicators.push(new Backbone.Models.MapIndicator({
+      return this.esriIndicators.push(new Backbone.Models.EsriIndicator({
         serviceName: "ESRI_StateCityHighway_USA",
         layer: 0
       }));
@@ -507,7 +507,7 @@
       this.closeSubViews();
       this.$el.html(this.template({
         view: this,
-        models: this.mapIndicators
+        models: this.esriIndicators
       }));
       this.renderSubViews();
       return this;
@@ -540,17 +540,17 @@
     MapView.prototype.template = Handlebars.templates['map.hbs'];
 
     MapView.prototype.initialize = function(options) {
-      this.mapIndicator = options.model;
-      return this.mapIndicator.fetchAllData(this.render);
+      this.esriIndicator = options.model;
+      return this.esriIndicator.fetchAllData(this.render);
     };
 
     MapView.prototype.render = function() {
-      if (this.mapIndicator.get('metadata') != null) {
+      if (this.esriIndicator.get('metadata') != null) {
         this.closeSubViews();
         this.$el.html(this.template({
           view: this,
-          name: this.mapIndicator.get('metadata').name,
-          mapIndicator: this.mapIndicator
+          name: this.esriIndicator.get('metadata').name,
+          esriIndicator: this.esriIndicator
         }));
         this.renderSubViews();
         window.mapView = this;
@@ -581,13 +581,12 @@
     EsriMapView.prototype.template = Handlebars.templates['esri_map.hbs'];
 
     EsriMapView.prototype.initialize = function(options) {
-      return this.mapIndicator = options.mapIndicator;
+      return this.esriIndicator = options.esriIndicator;
     };
 
     EsriMapView.prototype.render = function() {
       this.$el.html(this.template());
       this.createMap();
-      console.log("" + this.constructor.name + "." + this.cid + ": " + (this.mapIndicator.get('metadata').name) + " rendered");
       return this;
     };
 
@@ -596,8 +595,8 @@
         scrollWheelZoom: false
       }).setView([41.508577, -99.84375], 5);
       L.tileLayer("http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png").addTo(this.map);
-      return L.tileLayer.wms(this.mapIndicator.getWMSAddress(), {
-        layers: this.mapIndicator.layer,
+      return L.tileLayer.wms(this.esriIndicator.getWMSAddress(), {
+        layers: this.esriIndicator.layer,
         format: 'image/png',
         transparent: true
       }).addTo(this.map);

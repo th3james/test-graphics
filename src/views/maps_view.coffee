@@ -8,19 +8,19 @@ class Backbone.Views.MapsView extends Backbone.Diorama.NestingView
     "click #switch-to-environment": "triggerSwitchToEnvironment"
 
   initialize: (options) ->
-    @mapIndicators = []
-    @mapIndicators.push new Backbone.Models.MapIndicator(
+    @esriIndicators = []
+    @esriIndicators.push new Backbone.Models.EsriIndicator(
       serviceName: "ESRI_StateCityHighway_USA",
       layer: 1
     )
-    @mapIndicators.push new Backbone.Models.MapIndicator(
+    @esriIndicators.push new Backbone.Models.EsriIndicator(
       serviceName: "ESRI_StateCityHighway_USA",
       layer: 0
     )
 
   render: =>
     @closeSubViews()
-    @$el.html(@template(view: @, models: @mapIndicators))
+    @$el.html(@template(view: @, models: @esriIndicators))
     @renderSubViews()
 
     return @
