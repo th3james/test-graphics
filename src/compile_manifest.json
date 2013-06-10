@@ -2,6 +2,7 @@
   "models/indicator",
   "models/esri_indicator",
   "models/apiary_indicator",
+  "collections/apiary_indicator_collection",
   "templates/indicator_graphic",
   "views/indicator_graphic_view",
   "views/stacked_column_view",

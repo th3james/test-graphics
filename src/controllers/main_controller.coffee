@@ -3,6 +3,13 @@ window.Backbone.Controllers ||= {}
 
 class Backbone.Controllers.MainController extends Backbone.Diorama.Controller
   constructor: ->
+    # Make requests CORS by default
+    $.defaultAjax = $.ajax
+    $.ajax = (options) ->
+      options.contentType ||= 'application/json'
+
+      $.defaultAjax(options)
+
     @mainRegion = new Backbone.Diorama.ManagedRegion()
     $('body').append(@mainRegion.$el)
     
@@ -27,13 +34,10 @@ class Backbone.Controllers.MainController extends Backbone.Diorama.Controller
     )
 
   apiary: =>
-    @apiaryIndicators = []
-    @apiaryIndicators.push new Backbone.Models.ApiaryIndicator(
-      id: 1
-    )
+    @apiaryIndicators = new Backbone.Collections.ApiaryIndicatorCollection()
 
     apiaryIndicatorIndexView = new Backbone.Views.ApiaryIndicatorsIndexView(
-      indicators: @apiaryIndicators
+      indicators: @apiary_indicator_collection
     )
     @mainRegion.showView(apiaryIndicatorIndexView)
 

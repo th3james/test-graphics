@@ -6,7 +6,8 @@ class Backbone.Views.ApiaryIndicatorsRowView extends Backbone.View
 
   initialize: (options) ->
     @indicator = options.indicator
-    @render()
+    @indicator.on('fetch', @render)
+    @indicator.fetch()
 
   render: ->
     @$el.html(@template(indicator: @indicator.toJSON()))
