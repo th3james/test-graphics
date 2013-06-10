@@ -7,7 +7,7 @@ class Backbone.Controllers.MainController extends Backbone.Diorama.Controller
     $('body').append(@mainRegion.$el)
     
     # Default state
-    @esri()
+    @apiary()
 
 
   environment: =>
@@ -24,4 +24,18 @@ class Backbone.Controllers.MainController extends Backbone.Diorama.Controller
 
     @changeStateOn(
       {event: 'switchToEnvironment', publisher: mapsView, newState: @environment}
+    )
+
+  apiary: =>
+    @apiaryIndicators = []
+    @apiaryIndicators.push new Backbone.Models.ApiaryIndicator(
+      id: 1
+    )
+
+    apiaryIndicatorIndexView = new Backbone.Views.ApiaryIndicatorsIndexView(
+      indicators: @apiaryIndicators
+    )
+    @mainRegion.showView(apiaryIndicatorIndexView)
+
+    @changeStateOn(
     )

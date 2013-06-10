@@ -1,6 +1,7 @@
 [
   "models/indicator",
   "models/esri_indicator",
+  "models/apiary_indicator",
   "templates/indicator_graphic",
   "views/indicator_graphic_view",
   "views/stacked_column_view",
@@ -13,6 +14,10 @@
   "views/map_view",
   "templates/esri_map",
   "views/esri_map_view",
+  "templates/apiary_indicators_index",
+  "views/apiary_indicators_index_view",
+  "templates/apiary_indicators_row",
+  "views/apiary_indicators_row_view",
   "controllers/main_controller",
   "templates/main_graphics",
   "views/main_graphics_view"
