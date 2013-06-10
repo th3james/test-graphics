@@ -6,17 +6,21 @@ class Backbone.Views.ApiaryIndicatorsIndexView extends Backbone.Diorama.NestingV
 
   initialize: (options) ->
     @indicators = options.indicators
-    @render()
+    @indicators.on('sync', @render)
+    @indicators.fetch().fail((a,b,c)->
+      console.log "uh oh!"
+    )
 
   render: =>
     @closeSubViews()
     @$el.html(@template(
       thisView: @,
-      indicators: @indicators
+      indicators: @indicators.models
     ))
     @renderSubViews()
 
     return @
 
   onClose: ->
+    @indicators.off('sync', @render)
     @closeSubViews()

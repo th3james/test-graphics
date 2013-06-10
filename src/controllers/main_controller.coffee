@@ -34,10 +34,10 @@ class Backbone.Controllers.MainController extends Backbone.Diorama.Controller
     )
 
   apiary: =>
-    @apiaryIndicators = new Backbone.Collections.ApiaryIndicatorCollection()
+    apiaryIndicators = new Backbone.Collections.ApiaryIndicatorCollection()
 
     apiaryIndicatorIndexView = new Backbone.Views.ApiaryIndicatorsIndexView(
-      indicators: @apiary_indicator_collection
+      indicators: apiaryIndicators
     )
     @mainRegion.showView(apiaryIndicatorIndexView)
 

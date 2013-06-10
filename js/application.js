@@ -1,4 +1,4 @@
-(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["indicator_graphic.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h="function",i=this.escapeExpression;return f+="<h1>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===h?g.apply(b):g),f+=i(g)+'</h1>\n<div id="container"></div>\n',f}),b["maps.hbs"]=a(function(a,b,c,d,e){function k(a,b,d){var e="",f,g;return e+="\n  ",g={hash:{model:a},data:b},e+=i((f=c.addSubViewTo,f?f.call(a,d.view,"MapView",g):h.call(a,"addSubViewTo",d.view,"MapView",g)))+"\n",e}this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h=c.helperMissing,i=this.escapeExpression,j=this;f+="<h1>ESRI service graphics</h1>\n<p>\n  Graphics generated from JSON APIs based on ESRI services. I added axes data to\n  the basic layer descriptor to make automatic generation of graphics possible.\n  Check the README for details.\n</p>\n<a href='#' id=\"switch-to-environment\">Switch to envionment in pocket 'ideal' data</a>\n",g=c.each.call(b,b.models,{hash:{},inverse:j.noop,fn:j.programWithDepth(k,e,b),data:e});if(g||g===0)f+=g;return f+="\n",f}),b["map.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i="function",j=this.escapeExpression,k=c.helperMissing;return f+="<h3>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===i?g.apply(b):g),f+=j(g)+" ESRI layer</h3>\n",h={hash:{esriIndicator:b.esriIndicator},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"EsriStackedColumnView",h):k.call(b,"addSubViewTo",b.view,"EsriStackedColumnView",h)))+"\n",h={hash:{esriIndicator:b.esriIndicator},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"EsriMapView",h):k.call(b,"addSubViewTo",b.view,"EsriMapView",h)))+"\n",f}),b["esri_map.hbs"]=a(function(a,b,c,d,e){return this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{},'<h4>ESRI WMS map layer</h4>\n<div class="map"></div>\n'}),b["apiary_indicators_index.hbs"]=a(function(a,b,c,d,e){function k(a,b,d){var e="",f,g;return e+="\n  ",g={hash:{indicator:a},data:b},e+=i((f=c.addSubViewTo,f?f.call(a,d.thisView,"ApiaryIndicatorsRowView",g):h.call(a,"addSubViewTo",d.thisView,"ApiaryIndicatorsRowView",g)))+"\n",e}this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h=c.helperMissing,i=this.escapeExpression,j=this;f+="<h1>Apiary Indicators</h1>\n<p>These indicators back onto http://soerindicators.apiary.io</p>\n",g=c.each.call(b,b.indicators,{hash:{},inverse:j.noop,fn:j.programWithDepth(k,e,b),data:e});if(g||g===0)f+=g;return f+="\n",f}),b["apiary_indicators_row.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h="function",i=this.escapeExpression;return f+="<h1>Apiary Indicator "+i((g=(g=b.indicator,g==null||g===!1?g:g.id),typeof g===h?g.apply(b):g))+"</h1>\n",f}),b["main_graphics.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>Environment in my Pocket</h1>\n<p>\n  This data is based on the data in the government 'Environement in my Pocket'\n  report. The JSON was constructed by hand, containing metadata and data API\n  points. The data was constructed to determine the viability of auto generating\n  maps, and what fields would be needed in the metadata description.\n</p>\n<a href='#' id=\"switch-to-esri\">Switch to esri layer indicators</a>\n",h={hash:{indicatorName:"recycling_rates"},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"StackedColumnView",h):i.call(b,"addSubViewTo",b.view,"StackedColumnView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"PieChartView",h):i.call(b,"addSubViewTo",b.view,"PieChartView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"StackedColumnView",h):i.call(b,"addSubViewTo",b.view,"StackedColumnView",h)))+"\n",f})})()
+(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["indicator_graphic.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h="function",i=this.escapeExpression;return f+="<h1>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===h?g.apply(b):g),f+=i(g)+'</h1>\n<div id="container"></div>\n',f}),b["maps.hbs"]=a(function(a,b,c,d,e){function k(a,b,d){var e="",f,g;return e+="\n  ",g={hash:{model:a},data:b},e+=i((f=c.addSubViewTo,f?f.call(a,d.view,"MapView",g):h.call(a,"addSubViewTo",d.view,"MapView",g)))+"\n",e}this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h=c.helperMissing,i=this.escapeExpression,j=this;f+="<h1>ESRI service graphics</h1>\n<p>\n  Graphics generated from JSON APIs based on ESRI services. I added axes data to\n  the basic layer descriptor to make automatic generation of graphics possible.\n  Check the README for details.\n</p>\n<a href='#' id=\"switch-to-environment\">Switch to envionment in pocket 'ideal' data</a>\n",g=c.each.call(b,b.models,{hash:{},inverse:j.noop,fn:j.programWithDepth(k,e,b),data:e});if(g||g===0)f+=g;return f+="\n",f}),b["map.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i="function",j=this.escapeExpression,k=c.helperMissing;return f+="<h3>",(g=c.name)?g=g.call(b,{hash:{},data:e}):(g=b.name,g=typeof g===i?g.apply(b):g),f+=j(g)+" ESRI layer</h3>\n",h={hash:{esriIndicator:b.esriIndicator},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"EsriStackedColumnView",h):k.call(b,"addSubViewTo",b.view,"EsriStackedColumnView",h)))+"\n",h={hash:{esriIndicator:b.esriIndicator},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"EsriMapView",h):k.call(b,"addSubViewTo",b.view,"EsriMapView",h)))+"\n",f}),b["esri_map.hbs"]=a(function(a,b,c,d,e){return this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{},'<h4>ESRI WMS map layer</h4>\n<div class="map"></div>\n'}),b["apiary_indicators_index.hbs"]=a(function(a,b,c,d,e){function k(a,b,d){var e="",f,g;return e+="\n  ",g={hash:{indicator:a},data:b},e+=i((f=c.addSubViewTo,f?f.call(a,d.thisView,"ApiaryIndicatorsRowView",g):h.call(a,"addSubViewTo",d.thisView,"ApiaryIndicatorsRowView",g)))+"\n",e}this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h=c.helperMissing,i=this.escapeExpression,j=this;f+="<h1>Apiary Indicators</h1>\n<p>These indicators back onto http://soerindicators.apiary.io</p>\n",g=c.each.call(b,b.indicators,{hash:{},inverse:j.noop,fn:j.programWithDepth(k,e,b),data:e});if(g||g===0)f+=g;return f+="\n",f}),b["apiary_indicators_row.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h="function",i=this.escapeExpression;return f+="<h1>"+i((g=(g=b.indicator,g==null||g===!1?g:g.name),typeof g===h?g.apply(b):g))+"</h1>\n",f}),b["main_graphics.hbs"]=a(function(a,b,c,d,e){this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=c.helperMissing,j=this.escapeExpression;return f+="<h1>Environment in my Pocket</h1>\n<p>\n  This data is based on the data in the government 'Environement in my Pocket'\n  report. The JSON was constructed by hand, containing metadata and data API\n  points. The data was constructed to determine the viability of auto generating\n  maps, and what fields would be needed in the metadata description.\n</p>\n<a href='#' id=\"switch-to-esri\">Switch to esri layer indicators</a>\n",h={hash:{indicatorName:"recycling_rates"},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"StackedColumnView",h):i.call(b,"addSubViewTo",b.view,"StackedColumnView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"PieChartView",h):i.call(b,"addSubViewTo",b.view,"PieChartView",h)))+"\n",h={hash:{indicatorName:"waste_by_sector"},data:e},f+=j((g=c.addSubViewTo,g?g.call(b,b.view,"StackedColumnView",h):i.call(b,"addSubViewTo",b.view,"StackedColumnView",h)))+"\n",f})})()
 
 ;
 // Generated by CoffeeScript 1.6.2
@@ -119,29 +119,8 @@
 
     ApiaryIndicator.prototype.apiAddress = 'http://soerindicators.apiary.io';
 
-    ApiaryIndicator.prototype.url = function() {
+    ApiaryIndicator.prototype.resultUrl = function() {
       return "" + this.apiAddress + "/indicators/" + (this.get('id')) + "/query?where=objectid+>+0&returnGeometry=false&outFields=LENGTH,TYPE&f=pjson";
-    };
-
-    ApiaryIndicator.prototype.fetch = function(options) {
-      if (this.metadata == null) {
-        return this.getMetadata(options);
-      } else {
-        return ApiaryIndicator.__super__.fetch.call(this, options);
-      }
-    };
-
-    ApiaryIndicator.prototype.getMetadata = function(fetchOptions) {
-      var _this = this;
-
-      return $.ajax({
-        url: "" + this.apiAddress + "/indicators/" + (this.get('id')) + "?f=pjson"
-      }).done(function(data) {
-        _this.metadata = data;
-        return _this.fetch(fetchOptions);
-      }).fail(function(a, b, c) {
-        return console.log("Error getting metadata!");
-      });
     };
 
     return ApiaryIndicator;
@@ -161,6 +140,16 @@
     }
 
     ApiaryIndicatorCollection.prototype.model = Backbone.Models.ApiaryIndicator;
+
+    ApiaryIndicatorCollection.prototype.apiAddress = 'http://wcmcindicatorapi.apiary.io';
+
+    ApiaryIndicatorCollection.prototype.url = function() {
+      return "" + this.apiAddress + "/indicators";
+    };
+
+    ApiaryIndicatorCollection.prototype.parse = function(data) {
+      return data.indicators;
+    };
 
     return ApiaryIndicatorCollection;
 
@@ -683,20 +672,24 @@
 
     ApiaryIndicatorsIndexView.prototype.initialize = function(options) {
       this.indicators = options.indicators;
-      return this.render();
+      this.indicators.on('sync', this.render);
+      return this.indicators.fetch().fail(function(a, b, c) {
+        return console.log("uh oh!");
+      });
     };
 
     ApiaryIndicatorsIndexView.prototype.render = function() {
       this.closeSubViews();
       this.$el.html(this.template({
         thisView: this,
-        indicators: this.indicators
+        indicators: this.indicators.models
       }));
       this.renderSubViews();
       return this;
     };
 
     ApiaryIndicatorsIndexView.prototype.onClose = function() {
+      this.indicators.off('sync', this.render);
       return this.closeSubViews();
     };
 
@@ -782,11 +775,11 @@
     };
 
     MainController.prototype.apiary = function() {
-      var apiaryIndicatorIndexView;
+      var apiaryIndicatorIndexView, apiaryIndicators;
 
-      this.apiaryIndicators = new Backbone.Collections.ApiaryIndicatorCollection();
+      apiaryIndicators = new Backbone.Collections.ApiaryIndicatorCollection();
       apiaryIndicatorIndexView = new Backbone.Views.ApiaryIndicatorsIndexView({
-        indicators: this.apiary_indicator_collection
+        indicators: apiaryIndicators
       });
       this.mainRegion.showView(apiaryIndicatorIndexView);
       return this.changeStateOn();
