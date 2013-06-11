@@ -10,3 +10,5 @@ ESRI based indicator data api
 'App' API, which provides an index of indicators for the application to use. Essentially,
 this repackages the metadata from the above API, adding configuration for this app.
 
+## Apiary specs
+The apiary specs (which are used to power the apiary APIs this app communicates with) are backed up in the apiarySpecs folder
