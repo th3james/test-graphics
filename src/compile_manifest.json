@@ -9,6 +9,7 @@
   "views/pie_chart_view",
   "views/esri_graphics/map_indicator_graphic_view",
   "views/esri_graphics/stacked_column_view",
+  "views/apiary_graphics/stacked_column_view",
   "templates/maps",
   "views/maps_view",
   "templates/map",

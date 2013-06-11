@@ -1,1 +1,4 @@
-<h1>{{indicator.name}}</h1>
+<h1>{{indicatorName}}</h1>
+{{#if results}}
+  {{ addSubViewTo ../thisView 'ApiaryStackedColumnView' indicator=../indicator }}
+{{/if}}
