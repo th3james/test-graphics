@@ -560,17 +560,12 @@
       return _ref9;
     }
 
-    ApiaryStackedColumnView.prototype.template = Handlebars.templates['indicator_graphic.hbs'];
-
     ApiaryStackedColumnView.prototype.initialize = function(options) {
       this.indicator = options.indicator;
       return this.render();
     };
 
     ApiaryStackedColumnView.prototype.render = function() {
-      this.$el.html(this.template({
-        name: this.indicator.get('name')
-      }));
       this.drawGraph();
       return this;
     };
@@ -610,7 +605,7 @@
     };
 
     ApiaryStackedColumnView.prototype.drawGraph = function() {
-      return this.$el.find("#container").highcharts({
+      return this.$el.highcharts({
         chart: {
           type: "column"
         },

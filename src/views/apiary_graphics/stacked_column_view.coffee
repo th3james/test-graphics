@@ -2,7 +2,6 @@ window.Backbone ||= {}
 window.Backbone.Views ||= {}
 
 class Backbone.Views.ApiaryStackedColumnView extends Backbone.View
-  template: Handlebars.templates['indicator_graphic.hbs']
 
   initialize: (options) ->
     @indicator = options.indicator
@@ -10,9 +9,6 @@ class Backbone.Views.ApiaryStackedColumnView extends Backbone.View
     @render()
 
   render: =>
-    @$el.html(@template(
-      name: @indicator.get('name')
-    ))
     @drawGraph()
     return @
 
@@ -41,7 +37,7 @@ class Backbone.Views.ApiaryStackedColumnView extends Backbone.View
     return series
 
   drawGraph: ->
-    @$el.find("#container").highcharts(
+    @$el.highcharts(
       chart:
         type: "column"
 
