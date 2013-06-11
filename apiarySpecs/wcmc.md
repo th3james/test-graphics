@@ -1,4 +1,4 @@
-ST: http://www.google.com/
+HOST: http://www.google.com/
 
 --- WCMC Indicator API ---
 
@@ -27,5 +27,17 @@ GET /indicators
             }
         } 
     },
+    { 
+        "id": 1,
+        "name": "Protected Area Coverage",
+        "axes": {
+            "x": {
+              "fields": ["YEAR"]
+            },
+            "y": {
+              "fields": ["PERCENTAGE"]
+            }
+        } 
+    }
 ] }
 
