@@ -1,4 +1,4 @@
-HOST: http://www.google.com/
+ST: http://www.google.com/
 
 --- WCMC Indicator API ---
 
@@ -16,15 +16,16 @@ GET /indicators
 < Content-Type: application/json
 { "indicators": [
     { 
-        "name": "Protected Area cover",
+        "id": 0,
+        "name": "US Road length",
         "axes": {
             "x": {
-              "fields": ["Protected Area %"],
-              "unit": "percentage",
-              "name": "State name",
-              "fields": ["PA_cover"]
+              "fields": ["TYPE"]
+            },
+            "y": {
+              "fields": ["LENGTH"]
             }
         } 
-    }
+    },
 ] }
 

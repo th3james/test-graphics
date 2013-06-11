@@ -1,4 +1,4 @@
-ST: http://www.google.com/
+HOST: http://www.google.com/
 
 --- K&A ESRI Indicator ReST API.
 
@@ -158,4 +158,3 @@ GET /indicators/0/query?where=objectid+>+0&returnGeometry=false&outFields=LENGTH
     }
   ]
 }
-
