@@ -1,28 +1,12 @@
-# Graphics test
+# SOER API test front-end
 
-Playing around with what an api might need to look like to power different graphics.
+This app is designed as a test consumer for the indicator APIs which will be used in the
+SOER project. It depends on 2 JSON APIs:
 
-## ESRI Example layers
+[http://docs.soerindicators.apiary.io/](http://docs.soerindicators.apiary.io/)
+ESRI based indicator data api
 
-I'm using the esri example layers as the basic for my JSON examples, which I've
-put in json/map_indicators/
-The example service I'm is: http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Specialty/ESRI_StateCityHighway_USA/MapServer?f=pjson
+[http://docs.wcmcindicatorapi.apiary.io/](http://docs.wcmcindicatorapi.apiary.io/)
+'App' API, which provides an index of indicators for the application to use. Essentially,
+this repackages the metadata from the above API, adding configuration for this app.
 
-To make automatic graphic generation work, I had to add the 'axes' section to the layer metadata, in [the layer json](json/map_indicators/ESRI_StateCityHighway_USA/MapServer/1.json):
-
-```json 
-  "axes": {
-    "x": {
-      "fields": ["STATE_NAME"],
-      "unit": "text",
-      "name": "State name"
-    },
-    "y": {
-      "fields": ["AREA"],
-      "name": "Area",
-      "unit": "KM<sup>2</sup>"
-    }
-  }
-```
-
-In theory, it would be fairly easy to generate config like this if this information was not available in the API, using a simple UI where the user picks the axes
